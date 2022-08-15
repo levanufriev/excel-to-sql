@@ -1,0 +1,43 @@
+﻿@model List<Sheet>
+
+@{
+    ViewData["Title"] = "List of Banks";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <table>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.ClassName)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Account)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.InputBalanceActive)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.InputBalancePassive)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Debit)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Credit)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.OutputBalanceActive)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.OutputBalancePassive)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
